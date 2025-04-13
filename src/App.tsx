@@ -5,7 +5,7 @@ import Hero from "./components/Hero";
 import CTAInfo from "./components/CTAInfo";
 import Navbar from "./components/Navbar";
 import Service from "./components/Service";
-import Contact from "./components/Contact";
+import { RequestAQuote, GetInTouch } from "./components/Contact";
 
 const App = () => {
   const containerStyle = "max-w-[1152px] mx-auto my-0 px-4";
@@ -20,8 +20,9 @@ const App = () => {
       <Benefits containerStyle={containerStyle} />
       <Service containerStyle={containerStyle} />
       <CTAInfo containerStyle={containerStyle} infoDetail={infoDetails[2]} />
-      <Contact containerStyle={containerStyle} />
+      <RequestAQuote containerStyle={containerStyle} />
       <CTAInfo containerStyle={containerStyle} infoDetail={infoDetails[3]} />
+      <GetInTouch containerStyle={containerStyle} />
     </div>
   );
 };

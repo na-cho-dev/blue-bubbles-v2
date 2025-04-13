@@ -1,7 +1,7 @@
 import { assets } from "../assets/assets";
 import { AppContainerType } from "../types/AppTypes";
 
-const Contact = ({ containerStyle }: AppContainerType) => {
+export const RequestAQuote = ({ containerStyle }: AppContainerType) => {
   return (
     <section className="py-7" id="getQuote">
       <div className={`${containerStyle}`}>
@@ -24,9 +24,7 @@ const Contact = ({ containerStyle }: AppContainerType) => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="">
-              <div className="">
-                <img src={assets.bannerImg1} alt="" />
-              </div>
+              <img className="rounded-md" src={assets.bannerImg1} alt="" />
             </div>
 
             <div className="">
@@ -73,4 +71,63 @@ const Contact = ({ containerStyle }: AppContainerType) => {
   );
 };
 
-export default Contact;
+export const GetInTouch = ({ containerStyle }: AppContainerType) => {
+  return (
+    <section className={`${containerStyle} py-7`}>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="">
+          <h2 className="text-2xl font-bold my-2">Get In Touch Now</h2>
+          <p className="font-normal font-tetiary my-5">
+            Fill in the form below for any further enquiries and we will get
+            back to you as soon as possible. Thank you.
+          </p>
+          <form className="flex flex-col gap-4 mt-5">
+            <input
+              type="text"
+              name="name"
+              id=""
+              placeholder="Enter Your Name"
+              className="bg-transparent border-2 border-zinc-500 rounded-md p-2 font-light focus:outline-none focus:font-normal"
+            />
+            <input
+              type="tel"
+              name="tel"
+              id=""
+              placeholder="Enter Your Phone Number"
+              className="bg-transparent border-2 border-zinc-500 rounded-md p-2 font-light focus:outline-none focus:font-normal"
+            />
+            <input
+              type="email"
+              name="email"
+              id=""
+              placeholder="Enter Your Email"
+              className="bg-transparent border-2 border-zinc-500 rounded-md p-2 font-light focus:outline-none focus:font-normal"
+            />
+            <textarea
+              name=""
+              id=""
+              placeholder="Your description goes here"
+              rows={10}
+              className="bg-transparent border-2 border-zinc-500 rounded-md p-2 font-light focus:outline-none focus:font-normal"
+            ></textarea>
+
+            <button
+              className="bg-secondary p-3 w-fit rounded-md hover:bg-secondary hover:text-white transition-all duration-300"
+              type="submit"
+            >
+              Request Quote
+            </button>
+          </form>
+        </div>
+
+        <div className="">
+          <img
+            className="rounded-md hidden lg:block"
+            src={assets.bannerImg4}
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
