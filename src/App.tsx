@@ -1,5 +1,6 @@
 import { infoDetails } from "./assets/assets";
 import About from "./components/About";
+import Benefits from "./components/Benefits";
 import Hero from "./components/Hero";
 import Info from "./components/Info";
 import Navbar from "./components/Navbar";
@@ -14,6 +15,7 @@ const App = () => {
       <Info containerStyle={containerStyle} infoDetail={infoDetails[0]} />
       <About containerStyle={containerStyle} />
       <Info containerStyle={containerStyle} infoDetail={infoDetails[1]} />
+      <Benefits containerStyle={containerStyle} />
     </div>
   );
 };
