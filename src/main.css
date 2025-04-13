@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300;700&family=Fira+Sans:wght@300;500&family=Kanit:wght@200;300;400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #e7ebf8;
+}
+
+:root {
+  --color-primary: #1e90ff;
+  --color-primary-dull: #000a2c;
+  --color-secondary: #ff946d;
+  --color-tetiary: #00000059;
+  --color-tetiary-dull: #000000d1;
+  --font-secondary: "Anek Malayalam", sans-serif;
+  --font-tetiary: "Kanit", sans-serif;
+}
