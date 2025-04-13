@@ -19,6 +19,7 @@ const Benefits = ({ containerStyle }: AppContainerType) => {
         <h2 className="text-center text-primary-dull text-2xl md:text-[1.8em] font-extrabold py-1 px-2 my-7">
           Why Choose Blue Bubbles?
         </h2>
+        <div className="mx-auto h-1 w-20 bg-secondary mt-[-1.5rem] mb-10"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5">
           <BenefitCard

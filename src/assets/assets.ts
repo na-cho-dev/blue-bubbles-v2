@@ -81,7 +81,7 @@ export const infoDetails: InfoDetail[] = [
   },
   {
     title: "Anybody cannot just clean and get it right. Choose Us",
-    background: "",
+    background: `url(${assets.cleaningImg3})`,
     buttonText: "Call Us Now",
     buttonTextTwo: "",
   },
