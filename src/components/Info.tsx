@@ -23,7 +23,7 @@ const Info = ({ containerStyle, infoDetail }: InfoProps) => {
       )}
 
       {/* CONTENT */}
-      <div className={`${containerStyle} relative z-10`}>
+      <div className={`${containerStyle} relative z-1`}>
         <h1 className="my-1 mx-0 text-3xl md:text-4xl text-white font-semibold font-secondary">
           {infoDetail.title}
         </h1>
