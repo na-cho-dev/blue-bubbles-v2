@@ -16,3 +16,9 @@ export interface BenefitCardType {
   description: string;
   cardIcon: IconDefinition;
 }
+
+export interface ServiceCardType {
+  img: string;
+  title: string;
+  description: string;
+}

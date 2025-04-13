@@ -4,7 +4,7 @@ interface InfoProps extends AppContainerType {
   infoDetail: InfoDetail;
 }
 
-const Info = ({ containerStyle, infoDetail }: InfoProps) => {
+const CTAInfo = ({ containerStyle, infoDetail }: InfoProps) => {
   return (
     <section
       className="relative py-16 px-7 text-center"
@@ -27,9 +27,13 @@ const Info = ({ containerStyle, infoDetail }: InfoProps) => {
         <h1 className="my-1 mx-0 text-3xl md:text-4xl text-white font-semibold font-secondary">
           {infoDetail.title}
         </h1>
-        <button className="bg-primary text-white py-2 md:py-3 px-3 md:px-4 mt-5 m-2 rounded-md">
-          <a href="#services">{infoDetail.buttonText}</a>
-        </button>
+        {infoDetail.buttonText !== "" ? (
+          <button className="bg-primary text-white py-2 md:py-3 px-3 md:px-4 mt-5 m-2 rounded-md">
+            <a href="#services">{infoDetail.buttonText}</a>
+          </button>
+        ) : (
+          ""
+        )}
         {infoDetail.buttonTextTwo !== "" ? (
           <button className="text-primary-dull bg-secondary py-2 md:py-3 px-3 md:px-4 mt-5 m-2 rounded-md">
             <a href="#services">{infoDetail.buttonTextTwo}</a>
@@ -42,4 +46,4 @@ const Info = ({ containerStyle, infoDetail }: InfoProps) => {
   );
 };
 
-export default Info;
+export default CTAInfo;

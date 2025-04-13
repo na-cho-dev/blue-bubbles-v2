@@ -7,6 +7,9 @@ import cleaningImg5 from "./cleaningImg5.jpg";
 import cleaningImg6 from "./cleaningImg6.jpg";
 import cleaningImg7 from "./cleaningImg7.jpg";
 import cleaningImg8 from "./cleaningImg8.jpg";
+import cleaningImg9 from "./cleaningImg9.jpg";
+import cleaningImg10 from "./cleaningImg10.jpg";
+import cleaningImg11 from "./cleaningImg11.jpg";
 import bannerImg1 from "./bannerImg1.jpg";
 import bannerImg2 from "./bannerImg2.jpg";
 import bannerImg3 from "./bannerImg3.jpg";
@@ -23,6 +26,9 @@ export const assets = {
   cleaningImg6,
   cleaningImg7,
   cleaningImg8,
+  cleaningImg9,
+  cleaningImg10,
+  cleaningImg11,
   bannerImg1,
   bannerImg2,
   bannerImg3,
@@ -68,9 +74,10 @@ export const infoDetails: InfoDetail[] = [
   },
   {
     title: "Are you ready already? Get in touch with us now.",
-    background: "",
-    buttonText: "Call Us Now",
-    buttonTextTwo: "",
+    background:
+      "linear-gradient(333deg, rgba(0, 10, 44, 1) 28%, rgba(9, 85, 121, 1) 75%, rgba(255, 148, 109, 1) 100%",
+    buttonText: "",
+    buttonTextTwo: "Call Us Now",
   },
   {
     title: "Anybody cannot just clean and get it right. Choose Us",

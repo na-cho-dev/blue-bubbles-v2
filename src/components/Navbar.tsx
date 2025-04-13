@@ -8,12 +8,30 @@ import { Link } from "react-router-dom";
 const Navbar = ({ containerStyle }: AppContainerType) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleNavbar = () => {
     setNavbarOpen(!navbarOpen);
   };
 
   useEffect(() => {
+    const handleScrollHide = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 1000) {
+        if (currentScrollY > lastScrollY) {
+          setIsVisible(false);
+        } else {
+          setIsVisible(true);
+        }
+      } else {
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
     const handleResize = () => {
       if (window.innerWidth >= 768) {
         setNavbarOpen(false);
@@ -30,14 +48,15 @@ const Navbar = ({ containerStyle }: AppContainerType) => {
     };
 
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScrollHide);
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScrollHide);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [lastScrollY]);
 
   const handleLinkClick = (to: string) => {
     const targetElement = document.querySelector(to);
@@ -51,11 +70,11 @@ const Navbar = ({ containerStyle }: AppContainerType) => {
 
   return (
     <div
-      className={`fixed w-full z-10 transition-all ${
+      className={`fixed w-full z-10 transition-all duration-500 ${
         isScrolled
           ? "bg-primary-dull border-primary-dull border-b-4 shadow-lg py-0"
           : "bg-tetiary border-primary border-b-4 py-3"
-      }`}
+      } ${isVisible ? "top-0" : "-top-full"}`}
     >
       {/* Mobile Menu */}
       {

@@ -2,8 +2,9 @@ import { infoDetails } from "./assets/assets";
 import About from "./components/About";
 import Benefits from "./components/Benefits";
 import Hero from "./components/Hero";
-import Info from "./components/Info";
+import CTAInfo from "./components/CTAInfo";
 import Navbar from "./components/Navbar";
+import Service from "./components/Service";
 
 const App = () => {
   const containerStyle = "max-w-[1152px] mx-auto my-0 px-4";
@@ -12,10 +13,12 @@ const App = () => {
     <div>
       <Navbar containerStyle={containerStyle} />
       <Hero containerStyle={containerStyle} />
-      <Info containerStyle={containerStyle} infoDetail={infoDetails[0]} />
+      <CTAInfo containerStyle={containerStyle} infoDetail={infoDetails[0]} />
       <About containerStyle={containerStyle} />
-      <Info containerStyle={containerStyle} infoDetail={infoDetails[1]} />
+      <CTAInfo containerStyle={containerStyle} infoDetail={infoDetails[1]} />
       <Benefits containerStyle={containerStyle} />
+      <Service containerStyle={containerStyle} />
+      <CTAInfo containerStyle={containerStyle} infoDetail={infoDetails[2]} />
     </div>
   );
 };

@@ -5,7 +5,7 @@ const About = ({ containerStyle }: AppContainerType) => {
   return (
     <section className="py-7" id="about">
       <div className={`${containerStyle}`}>
-        <div className="w-fit rounded-md">
+        <div className="w-fit">
           <h2 className="text-primary text-2xl md:text-[1.8em] font-extrabold py-1 px-2">
             About Us
           </h2>
