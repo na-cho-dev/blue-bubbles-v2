@@ -73,7 +73,7 @@ const Navbar = ({ containerStyle }: AppContainerType) => {
       className={`fixed w-full z-10 transition-all duration-500 ${
         isScrolled
           ? "bg-primary-dull border-primary-dull border-b-4 shadow-lg py-0"
-          : "bg-tetiary border-primary border-b-4 py-3"
+          : "bg-tetiary border-primary border-b-4 py-2"
       } ${isVisible ? "top-0" : "-top-full"}`}
     >
       {/* Mobile Menu */}
@@ -107,7 +107,7 @@ const Navbar = ({ containerStyle }: AppContainerType) => {
         className={`${containerStyle} relative py-4 flex justify-between items-center`}
       >
         <div className="display flex items-center gap-2">
-          <img width="60px" height="60px" src={assets.logo} alt="" srcSet="" />
+          <img width="50px" height="50px" src={assets.logo} alt="" srcSet="" />
           <h2 className="text-2xl font-bold text-white">
             <Link to="">Blue Bubbles</Link>
           </h2>
