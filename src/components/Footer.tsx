@@ -82,7 +82,7 @@ const Footer = ({ containerStyle }: AppContainerType) => {
           </div>
         </div>
         <div className="">
-          <div className="flex justify-center items-center gap-4 list-none">
+          <div className="flex justify-center items-center gap-2 list-none text-sm">
             {Object.values(navLinks).map((link, ind) => (
               <li key={ind} className="hover:text-secondary">
                 <Link to={link.href} onClick={() => handleLinkClick(link.href)}>
