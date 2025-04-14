@@ -6,6 +6,7 @@ import CTAInfo from "./components/CTAInfo";
 import Navbar from "./components/Navbar";
 import Service from "./components/Service";
 import { RequestAQuote, GetInTouch } from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
   const containerStyle = "max-w-[1152px] mx-auto my-0 px-4";
@@ -23,6 +24,7 @@ const App = () => {
       <RequestAQuote containerStyle={containerStyle} />
       <CTAInfo containerStyle={containerStyle} infoDetail={infoDetails[3]} />
       <GetInTouch containerStyle={containerStyle} />
+      <Footer containerStyle={containerStyle} />
     </div>
   );
 };

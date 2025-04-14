@@ -1,7 +1,18 @@
+import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { AppContainerType } from "../types/AppTypes";
 
 const Hero = ({ containerStyle }: AppContainerType) => {
+  const handleLinkClick = (to: string) => {
+    const targetElement = document.querySelector(to);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <section
       className="bg-cover bg-no-repeat bg-center h-[100vh] flex items-center justify-center"
@@ -16,18 +27,24 @@ const Hero = ({ containerStyle }: AppContainerType) => {
         <div className="grid grid-cols-3 gap-4">
           <div className="md:col-span-2 col-span-3 bg-tetiary p-5 rounded-md">
             <p className="text-4xl md:text-5xl text-white font-bold">
-              Enjoy A <span className="text-secondary">Clean Atmosphere</span>{" "}
-              Always
+              Experience a{" "}
+              <span className="text-secondary">Cleaner, Healthier</span> Space
             </p>
             <p className="font-secondary text-white text-lg md:text-xl mt-4 font-medium">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia
-              accusantium necessitatibus beatae! Cumque commodi consequuntur
-              esse consectetur adipisicing elit. Quibusdam perferendis similique
-              aliquid. Aperiam dolorem inventore distinctio, nisi ipsam maxime
-              vero.
+              At Blue Bubbles Limited, we specialize in creating spotless,
+              organized, and welcoming spaces for homes, offices, and commercial
+              properties. Let us handle the cleaning so you can focus on what
+              matters most.
             </p>
             <button className="mt-4 bg-secondary text-white px-6 py-3 rounded-md hover:bg-white hover:text-secondary transition-all">
-              <a href="">Book A Services Now</a>
+              <Link
+                onClick={() => {
+                  handleLinkClick("#services");
+                }}
+                to="#services"
+              >
+                Explore Our Services
+              </Link>
             </button>
           </div>
         </div>
